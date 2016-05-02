@@ -72,7 +72,9 @@ with new keywrod - creates a constructor function...
 4) implicity returns this..
 
 
-
+///in ecma script 2015- we now have classes.....
+///node.js allows us to create classes using strict mode..
+///without node = have to use babel to trasile this javascript file..to ECMA 5..
 
 
 

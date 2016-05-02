@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="taskManager">
 <head>
-	<title>JS design patterns</title>
+	<title>JS design patterns - angular..constructor</title>
+	<script type="text/javascript" src="angular.js"></script>
 	<script type="text/javascript" src="js.js"></script>
+	<script type="text/javascript" src="Tasks.js"></script>
+
 </head>
 <body>
+
+<h2>DOING STUFF WITH ANGULAR CONSTRUCTOR PATTERN ....task checklist</h2>
+
+
+<div ng-controller = "taskController as ctrl">
+	
+	<div ng-repeat = "task in ctrl.tasks">
+		<input type="checkbox" ng-checked="task.completed"
+		ng-click="task.complete()"/>{{task.name}}
+	</div>
+
+
+
+
+</div>
+
+
 
 </body>
 </html>
