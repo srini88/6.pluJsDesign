@@ -1,21 +1,27 @@
-//responsible for making db calls. .
+//deals with API calls....this is injected into our Task factory,,,
 
-var repo = function(){
+(function(){
+	//getting taskManager module..
+	var app = angular.module('taskManager');
 
-	///database get , save , shit like that..emulating
-	return {
-		get : function(id){
-			console.log("getting task" + id);
+	var taskRepo = function(){
+		var db={};
+
+		var get = function(id){
+			console.log("getting task "+ id);
 			return {
-				name : "new task from db " + id
+				name: "new task from db"
 			}
 		}
+		var save = function(task){
+			console.log("saving "+ task.name + "to the db");
+		}
+
+		return {
+			get:get,
+			save:save
+		}
 	}
-}
+	app.service("TaskRepository", taskRepo);  //also used factory no change
 
-var repo1 = repo();
-
-console.log(repo1.get(5));
-
-// getting task5
-// Object {name: "new task from db 5"}
+})();
