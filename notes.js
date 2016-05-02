@@ -55,9 +55,27 @@ console.log(obj['param']) //new value...
 Object.defineProperty (obj, 'name', {
 
 
-
-
 });
+
+
+////////module 2....
+craetion design patterns --- used to create new objects...
+adapt creation to situation..
+
+
+///constructor pattern == use to create new objects with their own object scope...
+//////constructor pattern  same as creating new instance of a class...
+..the new keyword...
+with new keywrod - creates a constructor function...
+2) links to an object prototype...
+3) binds "this " to the new object scope..
+4) implicity returns this..
+
+
+
+
+
+
 
 
 

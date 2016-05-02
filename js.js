@@ -1,36 +1,38 @@
-var task4 = {
+//new keyword creation design pattern...
 
-title: "my task", 
-desc : "my description"
+var Task = function(name){
 
-};
+	this.name = name;
+	this.completed = false;
+	this.complete = function(){
+		console.log("completing task: " + this.name);
+		this.completed = true;
+	}
+	this.save = function(){  //not on prototype..so many compies of the same godammn function
+		console.log("saving task " +  this.name);
+	}
+	//return this;  - happens by default when using new
+}
 
-///remmeber last parameter to this method is a JSON object
-
-Object.defineProperty (task4, 'toString', {
-
-	"value" : function(){
-		return this.title  + " ** " + this.desc;
-	}, 
-	"writable" : false, 
-	"enumerable" : false, 
-	"configurable" : false   //does not matter to use ""  or not to 
-
-});
-////create an urgent Taks from task 
+var task1 = new Task("task1");
+var task2 = new Task("task2");
 
 
-var urgentTask = Object.create(task4);
+task1.complete();
+task1.save();
+ 
+task2.complete();
+task2.save();
 
-//see everything is set to false in task4...however urgent task inherited shit..
-Object.defineProperty (urgentTask, 'toString', {
 
-	"value" : function(){
-		return this.title  + " ** " +"urgentTask";
-	}, 
-	"writable" : false, 
-	"enumerable" : false, 
-	"configurable" : false   //does not matter to use ""  or not to 
+///drawbacks of this...
 
-});
-console.log(urgentTask.toString());  //my task ** urgentTask
+// complete and save is recreated for every task object...all 2 times..not very efficient..
+
+
+
+
+
+
+
+
