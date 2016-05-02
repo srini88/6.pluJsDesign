@@ -50,7 +50,14 @@ console.log(obj['param']) //new value...
 
 ///bracket notation can use variables  - - advantages...
 
-/////create a task object.....
+/////define property...
+
+Object.defineProperty (obj, 'name', {
+
+
+
+
+});
 
 
 
