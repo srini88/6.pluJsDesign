@@ -77,7 +77,8 @@ with new keywrod - creates a constructor function...
 ///without node = have to use babel to trasile this javascript file..to ECMA 5..
 
 
-
+----------------------------module pattern...
+we dont new shit up...
 
 
 
