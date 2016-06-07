@@ -1,18 +1,20 @@
-function myFunc(){
+//demonstrating chaining API
 
-	var result =0;
-	for (var i=0 ; i <arguments.length; ++i){
-		result += arguments[i];
+var Calc = function(){
+
+	this.add = function(x){
+
 	}
+	this.multiply = function(x){
 
-	var arr = Array.prototype.slice.apply(arguments); //also can use call
-	////you need to return an array -- that's why you got slice there..
-	console.log(arr.sort());  //works
+	}
+	this.equals = function(callback){
 
-
+	}
 
 
 }
 
+new Calc().add(1).add(2);  //js.js:18 Uncaught TypeError: Cannot read property 'add' of undefined
 
-myFunc(8, 9, 3, 4, 5, 6, 7);
+//new Calc()would return object...but not the middle add..so the second add does not have anything

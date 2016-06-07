@@ -145,3 +145,8 @@ Unspecified arguments become undefined...
 Arguments available through the arguments object 
 It's array-like but not really an array...
 arguments has a length property... cannot perfom actions like sorting and filtering..
+
+
+---------chaining..----
+
+new Calc(0).add(2)
