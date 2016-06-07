@@ -1,19 +1,18 @@
+function myFunc(){
 
-(function (){
-	angular.module("taskManager", [])   //creating a module..
-	.controller('taskController', ['Task' , function(Task){
-		
+	var result =0;
+	for (var i=0 ; i <arguments.length; ++i){
+		result += arguments[i];
+	}
 
-		var ctrl = this;
-		///creating multiple tasks at once...use object method
-		//pasing in object to the new Task
-		ctrl.tasks = [ new Task({name:'task1'}),
-		new Task({name:'task2', completed:false})];
-
-		///my tasks already get the complete function
+	var arr = Array.prototype.slice.apply(arguments); //also can use call
+	////you need to return an array -- that's why you got slice there..
+	console.log(arr.sort());  //works
 
 
-	}]);
 
-})();
 
+}
+
+
+myFunc(8, 9, 3, 4, 5, 6, 7);
