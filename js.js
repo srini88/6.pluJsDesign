@@ -21,3 +21,14 @@ var deathAnswer = Object.create(AnswerPrototype);
 
 deathAnswer.val  = 3.14;
 console.log(deathAnswer.get());  //3.14
+
+
+///others inherit FirmAnswerPrototype
+var FirmAnswerPrototype = Object.create(AnswerPrototype);
+FirmAnswerPrototype.get = function fn2(){
+	return this.val + "!!";
+}
+
+var luckyAnswer = Object.create(FirmAnswerPrototype);
+luckyAnswer.val = 7;
+console.log(luckyAnswer.get())  ///7!!
