@@ -1,5 +1,5 @@
 ///now same shit as previous but by using functions....
-
+//http://www.objectplayground.com/  very very imp lookk
 
 function Answer(value){
 	this._val = value;
@@ -39,5 +39,7 @@ var FA = new FirmAnswer(40);
 console.log(FA.get())
 
 
+console.log(FA instanceof FirmAnswer);  //true
+console.log(FA instanceof Answer )  ///true /..JS will go up the prototype...
 
 
