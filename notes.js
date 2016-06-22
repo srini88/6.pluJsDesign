@@ -150,3 +150,22 @@ arguments has a length property... cannot perfom actions like sorting and filter
 ---------chaining..----
 
 new Calc(0).add(2)
+
+-----------------------------------
+///watching youtube video....
+
+//https://www.youtube.com/watch?v=PMfcsYzj-9M
+
+object is a dictioray or hash...
+
+primitives are passsed by value, objects are passed by refefrence...
+
+
+if you assign object to one of these valiarbale...we are not copying the object...
+
+	we are just copying the reference...
+
+
+when you create a function in JS it creates an objet ..with 3 properties 
+
+name, lenght, prototype..
