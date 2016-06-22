@@ -25,10 +25,11 @@ console.log(deathAnswer.get());  //3.14
 
 ///others inherit FirmAnswerPrototype
 var FirmAnswerPrototype = Object.create(AnswerPrototype);
-FirmAnswerPrototype.get = function fn2(){
-	return this.val + "!!";
-}
+//now removed here...so goes chaining up to AnswerPrototype for the get method....that's why answer 7 wont have exclamation
+// FirmAnswerPrototype.get = function fn2(){
+// 	return this.val + "!!";
+//}
 
 var luckyAnswer = Object.create(FirmAnswerPrototype);
 luckyAnswer.val = 7;
-console.log(luckyAnswer.get())  ///7!!
+console.log(luckyAnswer.get())  ///7
