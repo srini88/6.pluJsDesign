@@ -12,7 +12,32 @@ Answer.prototype.get = function fn1(){
 
 var lifeAnswer = new Answer(42);
 
-console.log(lifeAnswer.get())   //42
+///Now lets do inheritance of Answer...
 
 
-console.log(Answer.prototype === Object.getPrototypeOf(lifeAnswer))  ///true
+function FirmAnswer(value){
+
+	Answer.call(this, value);   ////you always use call right to call the base classs and pass in this property...remember from Bear...
+
+}
+
+FirmAnswer.prototype = Object.create(Answer.prototype);  //extending Answer.prototype.....
+//also to make this shit consistent...
+
+FirmAnswer.prototype.constructor = FirmAnswer;   ///may be not necessary...to keep conssitent..
+
+////Now you add stuff to FirmAnswerPrototype.... very imp...you  have to do this after deriving prototype at line 24...
+
+
+FirmAnswer.prototype.get = function fn2(){
+	return this._val + "!!!!";
+}
+
+
+var FA = new FirmAnswer(40);
+
+console.log(FA.get())
+
+
+
+
