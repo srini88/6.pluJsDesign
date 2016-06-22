@@ -8,13 +8,12 @@ var answer = {
 var firmAnswer = Object.create(answer);
 
 firmAnswer.get = function fn2(){
-	return answer.get() +"!!";   //we want to call answer.get() in the context of firmAnswer  ///we are not doing it nowsd
+	return answer.get.call(firmAnswer) +"!!";  //using call and passing in context....
 }
 firmAnswer.val = 3.14;
 
 
-console.log(firmAnswer.get())  //gives 42!!! which is wrong ..we want it to show 3.14!!
-
+console.log(firmAnswer.get())  //gives 3.14!!! which is correct..
 
 
 
