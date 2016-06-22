@@ -1,27 +1,20 @@
-var parent = {
-
-	get: function(){
+var answer = {
+	get:function fn1(){
 		return this.val;
 	},
-	val :50
+	val:42
 }
 
-console.log(parent.get())  //50
+var firmAnswer = Object.create(answer);
 
-var child = Object.create(parent);
-
-child.val = 20;
-
-
-console.log(child.get())  //20 ////get method is on the parent..but this value is on the child itself....
+firmAnswer.get = function fn2(){
+	return this.val +"!!";
+}
 
 
-//console.log(child.get());  //50  here, nothing  on the child so goes to the parent and gets it...
+console.log(answer.get())  //42
+console.log(firmAnswer.get())  //42!!
 
 
-//console.log(child)  //child has parent prototype linked to it...
-
-
-
-//console.log(Object.getPrototypeOf(child) === parent)  //true
+//you got duplicated logic....in answer.get and firmAnswer.get... 
 

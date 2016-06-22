@@ -169,3 +169,16 @@ if you assign object to one of these valiarbale...we are not copying the object.
 when you create a function in JS it creates an objet ..with 3 properties 
 
 name, lenght, prototype..
+
+
+
+
+var noPrototype = Object.create(null)   ///Object with no prototype...
+
+
+all functions have Function.prototype as its prototype..
+
+
+polymorphism ---- is same name but different behaviour..
+
+children behave differently from parent......you can have polymorphism without inheritance..
